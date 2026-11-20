@@ -1,0 +1,89 @@
+{
+  "days": [
+    {
+      "day": "MONDAY",
+      "subtitle": "Office & Purchasing Day",
+      "accent": "#F5A623",
+      "focus": [
+        "Computer works: costing & billings",
+        "Purchase construction materials",
+        "Check all sites thru foreman",
+        "Paayo: quality check + post"
+      ],
+      "am": "Office & purchasing"
+    },
+    {
+      "day": "TUESDAY",
+      "subtitle": "Site Visit Day",
+      "accent": "#2EC4B6",
+      "focus": [
+        "Visit sites: Maco · Panabo · Davao",
+        "Check materials vs. deliveries",
+        "Note progress for accomplishments",
+        "Paayo: quality check + post"
+      ],
+      "am": "Site visits"
+    },
+    {
+      "day": "WEDNESDAY",
+      "subtitle": "Site Visit Day",
+      "accent": "#4CAF50",
+      "focus": [
+        "Visit remaining sites",
+        "Check materials on site",
+        "Follow up foremen & Bohol site",
+        "Paayo: quality check + post"
+      ],
+      "am": "Site visits"
+    },
+    {
+      "day": "THURSDAY",
+      "subtitle": "Design & Proposals Day",
+      "accent": "#9B6BFF",
+      "focus": [
+        "Design works: SketchUp · Lumion · CAD",
+        "Finish & send client proposals",
+        "Reply to client inquiries",
+        "Paayo: curate new drinks / post"
+      ],
+      "am": "Designs & proposals"
+    },
+    {
+      "day": "FRIDAY",
+      "subtitle": "Site Visit & Meetings",
+      "accent": "#3D8BFD",
+      "focus": [
+        "Site visit or client meetings",
+        "Prepare billings from accomplishments",
+        "Prepare payroll figures for tomorrow",
+        "Paayo: quality check + post"
+      ],
+      "am": "Sites / meetings"
+    },
+    {
+      "day": "SATURDAY",
+      "subtitle": "Payroll Day · Free Day",
+      "accent": "#FF5C5C",
+      "focus": [
+        "Prepare & release payroll",
+        "Review the week's expenses",
+        "Free time: recharge",
+        "Photography / videography"
+      ],
+      "am": "Payroll"
+    },
+    {
+      "day": "SUNDAY",
+      "subtitle": "Rest Day",
+      "accent": "#F7C873",
+      "focus": [
+        "Rest: no site work today",
+        "Spend time at Paayo Café",
+        "Plan next week's purchases",
+        "Shoot content for socials"
+      ],
+      "am": "Rest"
+    }
+  ],
+  "bills": "18th  Car mortgage   ·   28th  House rent"
+}
