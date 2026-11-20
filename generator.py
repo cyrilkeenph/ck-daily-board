@@ -12,7 +12,8 @@ def anton(size): return ImageFont.truetype(ANTON, size)
 import json, sys
 SITE = sys.argv[1] if len(sys.argv) > 1 else "."
 DATA = json.load(open(SITE + "/todos.json"))
-DAYS = [(d["day"], d["subtitle"], d["accent"], d["focus"], d["am"]) for d in DATA["days"]]
+EVERYDAY = DATA.get("everyday", [])  # carry-over tasks shown on every day until done
+DAYS = [(d["day"], d["subtitle"], d["accent"], EVERYDAY + d["focus"], d["am"]) for d in DATA["days"]]
 OUT = SITE
 
 def hexrgb(h): h = h.lstrip("#"); return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))

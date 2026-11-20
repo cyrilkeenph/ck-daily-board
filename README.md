@@ -5,3 +5,6 @@ Daily to-do lock-screen wallpapers (one per weekday), shown on CK's phone each m
 - `todos.json`: the to-do list (edit this)
 - `generator.py`: run `python3 generator.py .` to rebuild `Monday.png` … `Sunday.png`
 - Phone link: https://ck-daily-board-7q4x.netlify.app/today.png (serves today's image from this repo, Manila time)
+
+## Every-day tasks
+`"everyday"` in `todos.json` lists carry-over tasks shown at the top of every day's image until CK says "done <task>"; then remove it from that list.

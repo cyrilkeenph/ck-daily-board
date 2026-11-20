@@ -42,7 +42,6 @@
       "accent": "#9B6BFF",
       "focus": [
         "Design works: SketchUp · Lumion · CAD",
-        "Design for café cart",
         "Finish & send client proposals",
         "Reply to client inquiries",
         "Paayo: curate new drinks / post"
@@ -86,5 +85,8 @@
       "am": "Rest"
     }
   ],
-  "bills": "18th  Car mortgage   ·   28th  House rent"
+  "bills": "18th  Car mortgage   ·   28th  House rent",
+  "everyday": [
+    "Design for café cart"
+  ]
 }
