@@ -81,7 +81,7 @@ for idx, (day, sub, accent, focus, mid) in enumerate(DAYS, 1):
         ("AM", mid),
         ("1 PM", "Paayo Café: quality & posting"),
         ("9 PM", "Head home"),
-        ("10 PM", "Designs & proposals until 1 AM"),
+        ("10 PM", "Designs, proposals & AI side hustle"),
     ]
     if day == "SUNDAY":
         flow[2] = ("AM", "Rest & recharge")
