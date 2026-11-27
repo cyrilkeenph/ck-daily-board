@@ -51,7 +51,9 @@ for idx, (day, sub, accent, focus, mid) in enumerate(DAYS, 1):
     img = background(accent)
     d = ImageDraw.Draw(img)
     X = 80
-    y = 780  # keep top area clear for the lock-screen clock
+    n_rows = len(focus)
+    compact = n_rows > 7
+    y = 740 if compact else 780  # keep top area clear for the lock-screen clock
 
     # Day title
     d.text((X, y), day, font=anton(150), fill=A)
@@ -62,15 +64,16 @@ for idx, (day, sub, accent, focus, mid) in enumerate(DAYS, 1):
     # Focus card
     top = y
     rows = len(focus)
-    step = 92 if rows <= 4 else max(60, int(368 / rows))
+    step = 92 if rows <= 4 else (50 if compact else max(60, int(368 / rows)))
     card_h = 95 + rows * step + 20
     card(img, [X - 20, top, W - X + 20, top + card_h])
     d = ImageDraw.Draw(img)
     d.text((X + 20, top + 32), "TODAY'S FOCUS", font=f("Inter-Bold.otf", 28), fill=A)
     ry = top + 100
     for item in focus:
-        d.rounded_rectangle([X + 20, ry + 4, X + 66, ry + 50], 10, outline=A, width=4)
-        d.text((X + 92, ry + 4), item, font=f("Inter-Medium.otf", 39), fill=(245, 245, 248))
+        bx = 40 if compact else 46
+        d.rounded_rectangle([X + 20, ry + 4, X + 20 + bx, ry + 4 + bx], 10, outline=A, width=4)
+        d.text((X + 92, ry + (2 if compact else 4)), item, font=f("Inter-Medium.otf", 35 if compact else 39), fill=(245, 245, 248))
         ry += step
     y = top + card_h + 28
 
@@ -87,7 +90,8 @@ for idx, (day, sub, accent, focus, mid) in enumerate(DAYS, 1):
         flow[2] = ("AM", "Rest & recharge")
         flow[5] = ("10 PM", "Light planning, sleep early")
     top = y
-    card_h = 90 + len(flow) * 56 + 14
+    fstep = 48 if compact else 56
+    card_h = 90 + len(flow) * fstep + 14
     card(img, [X - 20, top, W - X + 20, top + card_h])
     d = ImageDraw.Draw(img)
     d.text((X + 20, top + 30), "DAILY FLOW", font=f("Inter-Bold.otf", 28), fill=A)
@@ -95,7 +99,7 @@ for idx, (day, sub, accent, focus, mid) in enumerate(DAYS, 1):
     for t, label in flow:
         d.text((X + 20, ry), t, font=f("Inter-Bold.otf", 32), fill=A)
         d.text((X + 190, ry), label, font=f("Inter-Regular.otf", 33), fill=(220, 222, 230))
-        ry += 56
+        ry += fstep
     y = top + card_h + 28
 
     # Monthly bills banner
